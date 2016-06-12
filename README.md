@@ -19,7 +19,7 @@ No diretório do projeto, execute: `~/spotippos-vivareal$ mvn clean package spri
 
 ### Java Jar
 
-Se preferir, crie o artefato java: `~/spotippos-vivareal$ mvn clean install`. E depois execute-o: `~/spotippos-vivareal$ java -jar target/spotippos-vivareal-0.1.0.jar`.
+Se preferir, crie o artefato java: `~/spotippos-vivareal$ mvn clean package`. E depois execute-o: `~/spotippos-vivareal$ java -jar target/spotippos-vivareal-0.1.0.jar`.
 
 ## Teste
 
