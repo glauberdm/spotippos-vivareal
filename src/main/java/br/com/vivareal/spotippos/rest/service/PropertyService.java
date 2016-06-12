@@ -12,7 +12,7 @@ import br.com.vivareal.spotippos.rest.response.exception.PropertyNotFoundExcepti
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.Comparator;
 import java.util.List;
@@ -25,7 +25,7 @@ import java.util.stream.Collectors;
  *
  * @author <a href="mailto:glauberbcc@gmail.com">Glauber Monteiro</a>
  */
-@Component
+@Service
 public class PropertyService {
 
     public static final String SUCCESS_MESSAGE = "Congratulations! Your property was created in spotippos-vivareal! :D";

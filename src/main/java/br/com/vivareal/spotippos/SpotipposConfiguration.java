@@ -33,12 +33,20 @@ public class SpotipposConfiguration {
 
     @Bean(name = "provinces")
     public Provinces provinces() throws IOException {
-        return loadJsonProvinces.loadFromFile(PROVINCES_FILE_NAME);
+        try {
+            return loadJsonProvinces.loadFromURL(PROVINCES_URL);
+        } catch (Exception e) {
+            return loadJsonProvinces.loadFromFile(PROVINCES_FILE_NAME);
+        }
     }
 
     @Bean(name = "properties")
     @DependsOn({"provinces"})
     public Properties properties() throws IOException {
-        return loadJsonProperties.loadFromFile(PROPERTIES_FILE_NAME);
+        try {
+            return loadJsonProperties.loadFromURL(PROPERTIES_URL);
+        } catch (Exception e) {
+            return loadJsonProperties.loadFromFile(PROPERTIES_FILE_NAME);
+        }
     }
 }

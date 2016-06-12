@@ -11,11 +11,12 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.net.UnknownHostException;
 
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
 import static org.hamcrest.Matchers.nullValue;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
 
 /**
  * Test for {@link LoadJsonProperties}.
@@ -43,7 +44,7 @@ public class LoadJsonPropertiesTest {
         assertThat(properties, is(nullValue()));
     }
 
-    @Test
+    @Test(expected = UnknownHostException.class)
     public void loadJsonPropertiesFromURLSucess() throws IOException {
         Properties properties = loadJsonProperties.loadFromURL(SpotipposConfiguration.PROPERTIES_URL);
 

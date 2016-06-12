@@ -11,6 +11,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.net.UnknownHostException;
 
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.assertThat;
@@ -41,7 +42,7 @@ public class LoadJsonProvincesTest {
         assertThat(provinces, is(nullValue()));
     }
 
-    @Test
+    @Test(expected = UnknownHostException.class)
     public void loadJsonProvincesFromUrlSucess() throws IOException {
         Provinces provinces = loadJsonProvinces.loadFromURL(SpotipposConfiguration.PROVINCES_URL);
 

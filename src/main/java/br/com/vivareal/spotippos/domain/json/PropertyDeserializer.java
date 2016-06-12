@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 
 /**
  * {@link JsonDeserializer} for {@link Property}
@@ -34,6 +35,7 @@ public class PropertyDeserializer extends JsonDeserializer<Property> {
         JsonNode actualNode;
 
         Property property = new Property();
+        property.setPrice((actualNode = propertieNode.get("price")) != null ? new BigDecimal(actualNode.asDouble()) : null);
         property.setId((actualNode = propertieNode.get("id")) != null ? actualNode.asLong() : null);
         property.setX((actualNode = propertieNode.get("x")) != null ? actualNode.asInt() : 0);
         property.setY((actualNode = propertieNode.get("y")) != null ? actualNode.asInt() : 0);
