@@ -23,5 +23,6 @@ Se preferir, crie o artefato java: `~/spotippos-vivareal$ mvn clean package`. E 
 
 ## Teste
 
-O [Postman](https://www.getpostman.com/docs/) é uma excelente ferramenta de testes para REST APIs. No arquivo [spotippos-vivareal.postman_collection.json](spotippos-vivareal.postman_collection.json) há alguns testes prontos. Divirta-se!
+O [Postman](https://www.getpostman.com/docs/) é uma excelente ferramenta de testes para REST APIs. No arquivo [spotippos-vivareal.postman_collection.json](spotippos-vivareal.postman_collection.json) há alguns testes prontos. 
 
+Divirta-se!
