@@ -44,13 +44,6 @@ public class LoadJsonPropertiesTest {
         assertThat(properties, is(nullValue()));
     }
 
-    @Test(expected = UnknownHostException.class)
-    public void loadJsonPropertiesFromURLSucess() throws IOException {
-        Properties properties = loadJsonProperties.loadFromURL(SpotipposConfiguration.PROPERTIES_URL);
-
-        assertThat(properties, is(notNullValue()));
-    }
-
     @Test(expected = MalformedURLException.class)
     public void loadJsonPropertiesFromURLFail() throws IOException {
         Properties properties = loadJsonProperties.loadFromURL(null);

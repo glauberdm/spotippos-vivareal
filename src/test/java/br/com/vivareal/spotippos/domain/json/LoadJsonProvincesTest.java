@@ -42,13 +42,6 @@ public class LoadJsonProvincesTest {
         assertThat(provinces, is(nullValue()));
     }
 
-    @Test(expected = UnknownHostException.class)
-    public void loadJsonProvincesFromUrlSucess() throws IOException {
-        Provinces provinces = loadJsonProvinces.loadFromURL(SpotipposConfiguration.PROVINCES_URL);
-
-        assertThat(provinces, is(notNullValue()));
-    }
-
     @Test(expected = MalformedURLException.class)
     public void loadJsonProvincesFromUrlFail() throws IOException {
         Provinces provinces = loadJsonProvinces.loadFromURL(null);
