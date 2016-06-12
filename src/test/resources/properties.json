@@ -1,0 +1,29 @@
+{
+  "totalProperties": 3,
+  "properties": [
+    {
+      "id": 1,
+      "x": 88,
+      "y": 521,
+      "beds": 5,
+      "baths": 4,
+      "squareMeters": 198
+    },
+    {
+      "id": 2,
+      "x": 1004,
+      "y": 99,
+      "beds": 4,
+      "baths": 3,
+      "squareMeters": 84
+    },
+    {
+      "id": 47,
+      "x": 585,
+      "y": 557,
+      "beds": 5,
+      "baths": 4,
+      "squareMeters": 218
+    }
+  ]
+}
